@@ -55,9 +55,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo esc_attr($title); ?>">
     <meta name="twitter:description" content="<?php echo esc_attr($excerpt); ?>">
-
-
-
     <?php
     if (is_singular("post") && has_post_thumbnail($post_id)) {
         $twitter_image = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "large");
