@@ -75,7 +75,7 @@
 </head>
 
 <body class="bg-white min-h-screen flex flex-col items-center px-6 sm:px-14 py-2 sm:py-6" <?php body_class() ?>>
-    <header class="hidden sm:flex justify-between items-center custom-container text-slate-300">
+    <header class="hidden sm:flex justify-between items-center custom-container text-slate-300 w-full">
         <h1>
             <a href="<?php echo esc_url(home_url()); ?>">
                 <?php
