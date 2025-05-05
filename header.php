@@ -79,7 +79,7 @@
         <h1>
             <a href="<?php echo esc_url(home_url()); ?>">
                 <?php
-                $custom_class = "w-24 h-8";
+                $custom_class = "w-40 h-12";
                 get_template_part("templates/icons/logo", null, array(
                     "custom_class" => $custom_class
                 ));
