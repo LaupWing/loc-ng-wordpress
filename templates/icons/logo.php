@@ -1,6 +1,10 @@
+<?php
+$custom_class = isset($args["custom_class"]) ? $args["custom_class"] : "w-6 h-6 fill-current";
+?>
 <svg
+    class="<?php echo esc_attr($custom_class); ?>"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-current"
+    class=""
     zoomAndPan="magnify"
     viewBox="0 0 375 149.999998"
     preserveAspectRatio="xMidYMid meet"
