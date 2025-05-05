@@ -9,23 +9,6 @@ $custom_class = isset($args["custom_class"]) ? $args["custom_class"] : "w-6 h-6 
     viewBox="0 0 375 149.999998"
     preserveAspectRatio="xMidYMid meet"
     version="1.0">
-    <defs>
-        <g></g>
-    </defs>
-    <rect
-        x="-37.5"
-        width="450"
-        fill="#ffffff"
-        y="-15"
-        height="179.999997"
-        fill-opacity="1" />
-    <rect
-        x="-37.5"
-        width="450"
-        fill="#ffffff"
-        y="-15"
-        height="179.999997"
-        fill-opacity="1" />
     <g fill="#000000" fill-opacity="1">
         <g transform="translate(12.468063, 114.532847)">
             <g>

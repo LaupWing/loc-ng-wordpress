@@ -74,7 +74,7 @@
     <?php wp_head() ?>
 </head>
 
-<body class="bg-slate-900 min-h-screen flex flex-col items-center px-6 sm:px-14 py-6 sm:py-10" <?php body_class() ?>>
+<body class="bg-white min-h-screen flex flex-col items-center px-6 sm:px-14 py-2 sm:py-6" <?php body_class() ?>>
     <header class="hidden sm:flex justify-between items-center custom-container text-slate-300">
         <h1>
             <a href="<?php echo esc_url(home_url()); ?>">
