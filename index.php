@@ -1,7 +1,13 @@
 <?php
 get_header()
 ?>
-<div class="custom-container py-20">
+<div class="custom-container flex items-start flex-col py-20">
+    <div class="p-1.5 bg-emerald-100 rounded-full mb-4">
+        <div class="h-full px-3 py-1 bg-emerald-300 flex items-center rounded-full gap-2">
+            <div class="h-2 w-2 rounded-full bg-lime-300 shadow-lime-200 shadow-lg animate-pulse"></div>
+            <h2 class="text-white text-xs font-bold uppercase">Products to improve your life</h2>
+        </div>
+    </div>
     <span class="text-slate-400 uppercase text-sm tracking-wider">Loc Nguyen</span>
     <h1 class="font-bold max-w-sm text-3xl md:text-5xl 2xl:text-6xl" data-fade="2">Do what works. Enjoy
         <div class="inline-block text-light py-0.5">
@@ -10,12 +16,12 @@ get_header()
             </span>
         </div>
     </h1>
-    <p class="mt-4 max-w-4xl text-gray-700 dark:text-gray-200 md:mt-6 md:text-lg 2xl:text-xl" data-fade="3">I possess a strong enthusiasm for both programming and fitness, finding fulfillment in assisting individuals either at the gym or in the realm of coding.</p>
+    <p class="mt-4 max-w-4xl text-gray-700 md:mt-6 md:text-lg 2xl:text-xl" data-fade="3">I possess a strong enthusiasm for both programming and fitness, finding fulfillment in assisting individuals either at the gym or in the realm of coding.</p>
     <div class="mt-8 flex flex-wrap gap-4 md:!text-lg" data-fade="4">
         <div class="group relative flex">
             <div class="absolute -inset-0.5 animate-pulse rounded blur from-custom-green bg-gradient-to-r to-custom-purple opacity-75 transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
             <div class="gradient-animation-border shadow hover:scale-[1.03] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 transition duration-100 scale-100 "><button class="rounded font-bold px-4 scale-100 disabled:bg-gray-200  dark:disabled:bg-gray-700  bg-white py-[7px]"><a href="/blog">Subscribe</a></button></div>
-        </div><a href="/about"><button class="rounded font-bold px-4 scale-100 bg-light dark:bg-dark text-gray-600 disabled:bg-gray-200 dark:text-gray-200 dark:disabled:bg-gray-700  py-2 border border-gray-300 dark:border-gray-600 focus:outline-none focus-visible:ring focus-visible:ring-accent shadow-sm hover:scale-[1.03] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 transition duration-100">Learn more about me</button></a>
+        </div>
     </div>
 </div>
 <?php
