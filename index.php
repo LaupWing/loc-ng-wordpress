@@ -17,7 +17,11 @@ get_header()
         </div>
     </h1>
     <p class="mt-4 max-w-4xl text-gray-700 md:mt-6 md:text-lg 2xl:text-xl" data-fade="3">I possess a strong enthusiasm for both programming and fitness, finding fulfillment in assisting individuals either at the gym or in the realm of coding.</p>
-    <div class="mt-8 flex flex-wrap gap-4 md:!text-lg" data-fade="4">
+    <div class="mt-8 flex bg-gray-100 border border-gray-200 relative p-2 rounded-md flex-wrap gap-1 md:!text-lg" data-fade="4">
+        <label for="email" class="absolute -top-6 left-0 text-gray-300 bg-gray-100 text-sm font-bold rounded-t px-2 uppercase pb-1 border border-gray-200 border-b-0">
+            Your email
+        </label>
+        <input type="text" class="rounded bg-white text-gray-700 placeholder:text-gray-400 px-2 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-custom-green focus:ring-opacity-50" placeholder="Search for something..." />
         <div class="group relative flex">
             <div class="absolute -inset-0.5 animate-pulse rounded blur from-custom-green bg-gradient-to-r to-custom-purple opacity-75 transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
             <div class="gradient-animation-border shadow hover:scale-[1.03] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 transition duration-100 scale-100 "><button class="rounded font-bold px-4 scale-100 disabled:bg-gray-200  dark:disabled:bg-gray-700  bg-white py-[7px]"><a href="/blog">Subscribe</a></button></div>
