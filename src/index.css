@@ -12,6 +12,11 @@
   --nav-height: 4.5rem;
 }
 
+@theme {
+  --color-dark: rgb(var(--custom-dark));
+  --color-light: rgb(var(--custom-light));
+}
+
 .menu {
   @apply flex gap-10;
 }
