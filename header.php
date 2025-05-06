@@ -74,62 +74,66 @@
     <?php wp_head() ?>
 </head>
 
-<body class="bg-white min-h-screen flex flex-col items-center px-6 sm:px-14 py-2 sm:py-6" <?php body_class() ?>>
-    <header class="hidden sm:flex justify-between items-center custom-container text-slate-300 w-full">
-        <h1>
-            <a href="<?php echo esc_url(home_url()); ?>">
-                <?php
-                $custom_class = "w-40 h-12";
-                get_template_part("templates/icons/logo", null, array(
-                    "custom_class" => $custom_class
-                ));
-                ?>
-            </a>
-        </h1>
-        <nav class="font-cursive">
-            <?php
-            wp_nav_menu([
-                "theme_location" => "headerMenuLocation"
-            ]);
-            ?>
-        </nav>
-    </header>
-    <header class="grid grid-cols-3 sm:hidden justify-between items-center custom-container text-slate-300">
-        <button id="mobile-menu">
-            <?php
-            $custom_class = "text-slate-50 w-8 h-8";
-            get_template_part("templates/ui/menu", null, array(
-                "custom_class" => $custom_class
-            ));
-            ?>
-        </button>
+<body class="bg-white min-h-screen" <?php body_class() ?>>
+    <div class="gradient-animation w-full h-1.5 bg-red-400"></div>
+    <div class=" flex flex-col items-center px-6 sm:px-14 py-2 sm:py-6">
 
-        <h1 class="flex items-center justify-center">
-            <a href="<?php echo esc_url(home_url()); ?>">
+
+        <header class="hidden sm:flex justify-between items-center custom-container text-slate-300 w-full">
+            <h1>
+                <a href="<?php echo esc_url(home_url()); ?>">
+                    <?php
+                    $custom_class = "w-40 h-12";
+                    get_template_part("templates/icons/logo", null, array(
+                        "custom_class" => $custom_class
+                    ));
+                    ?>
+                </a>
+            </h1>
+            <nav class="font-cursive">
                 <?php
-                $custom_class = "w-24 h-8";
-                get_template_part("templates/icons/logo", null, array(
-                    "custom_class" => $custom_class
-                ));
+                wp_nav_menu([
+                    "theme_location" => "headerMenuLocation"
+                ]);
                 ?>
-            </a>
-        </h1>
-        <div></div>
-    </header>
-    <div id="side-nav" class="fixed sm:hidden transform -translate-x-full inset-0 p-10 bg-slate-900 z-[100] duration-500">
-        <nav id="mobile" class="font-cursive flex flex-col">
-            <button class="ml-auto">
+            </nav>
+        </header>
+        <header class="grid grid-cols-3 sm:hidden justify-between items-center custom-container text-slate-300">
+            <button id="mobile-menu">
                 <?php
-                $custom_class = "w-8 h-8 text-slate-50";
-                get_template_part("templates/ui/close", null, array(
+                $custom_class = "text-slate-50 w-8 h-8";
+                get_template_part("templates/ui/menu", null, array(
                     "custom_class" => $custom_class
                 ));
                 ?>
             </button>
-            <?php
-            wp_nav_menu([
-                "theme_location" => "headerMenuLocation"
-            ]);
-            ?>
-        </nav>
-    </div>
+
+            <h1 class="flex items-center justify-center">
+                <a href="<?php echo esc_url(home_url()); ?>">
+                    <?php
+                    $custom_class = "w-24 h-8";
+                    get_template_part("templates/icons/logo", null, array(
+                        "custom_class" => $custom_class
+                    ));
+                    ?>
+                </a>
+            </h1>
+            <div></div>
+        </header>
+        <div id="side-nav" class="fixed sm:hidden transform -translate-x-full inset-0 p-10 bg-slate-900 z-[100] duration-500">
+            <nav id="mobile" class="font-cursive flex flex-col">
+                <button class="ml-auto">
+                    <?php
+                    $custom_class = "w-8 h-8 text-slate-50";
+                    get_template_part("templates/ui/close", null, array(
+                        "custom_class" => $custom_class
+                    ));
+                    ?>
+                </button>
+                <?php
+                wp_nav_menu([
+                    "theme_location" => "headerMenuLocation"
+                ]);
+                ?>
+            </nav>
+        </div>
