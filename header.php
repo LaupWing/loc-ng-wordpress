@@ -76,14 +76,14 @@
 
 <body class="bg-white min-h-screen" <?php body_class() ?>>
     <div class="gradient-animation w-full h-1.5 bg-red-400"></div>
-    <div class=" flex flex-col items-center px-6 sm:px-14 py-2 sm:py-6">
+    <div class="flex flex-col items-center px-6 sm:px-14 py-2 sm:py-6">
 
         <header class="hidden sm:flex justify-between items-center custom-container w-full">
             <nav class="font-cursive gap-4 flex items-center ">
                 <h1>
                     <a href="<?php echo esc_url(home_url()); ?>">
                         <?php
-                        $custom_class = "w-40 h-12";
+                        $custom_class = "h-12";
                         get_template_part("templates/icons/logo", null, array(
                             "custom_class" => $custom_class
                         ));
