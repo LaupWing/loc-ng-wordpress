@@ -12,6 +12,15 @@
   --nav-height: 4.5rem;
 }
 
+.menu {
+  @apply flex gap-10;
+}
+#mobile .menu {
+  @apply text-slate-500 flex flex-col gap-10;
+}
+.current-menu-item {
+}
+
 @keyframes straight {
   0% {
     background-position: 0% 50%;
