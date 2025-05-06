@@ -3,7 +3,12 @@ get_header()
 ?>
 <div class="custom-container py-20">
     <h2 class="text-2xl text-dark dark:text-light font-bold md:text-4xl 2xl:text-5xl" data-fade="1">Hello</h2>
-    <h1 class="mt-1 text-dark dark:text-light font-bold text-3xl md:text-5xl 2xl:text-6xl" data-fade="2">My name is <div class="dark:!bg-gradient-to-r dark:!from-dark dark:!to-dark gradient-animation-slow inline-block text-light py-0.5"><span class="transition-colors dark:gradient-animation-slow dark:bg-clip-text dark:text-transparent">Loc Nguyen</span></div>
+    <h1 class="mt-1 text-dark dark:text-light font-bold text-3xl md:text-5xl 2xl:text-6xl" data-fade="2">My name is
+        <div class="dark:!bg-gradient-to-r dark:!from-dark dark:!to-dark gradient-animation-slow inline-block text-light py-0.5">
+            <span class="transition-colors dark:gradient-animation-slow dark:bg-clip-text dark:text-transparent">
+                Loc Nguyen
+            </span>
+        </div>
     </h1>
     <p class="mt-4 max-w-4xl text-gray-700 dark:text-gray-200 md:mt-6 md:text-lg 2xl:text-xl" data-fade="3">I possess a strong enthusiasm for both programming and fitness, finding fulfillment in assisting individuals either at the gym or in the realm of coding.</p>
     <div class="mt-8 flex flex-wrap gap-4 md:!text-lg" data-fade="4">
