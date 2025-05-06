@@ -56,16 +56,18 @@
   animation: straight 10s linear infinite;
 }
 
-.gradient-animation-slow {
-  background: linear-gradient(
-    -45deg,
-    rgb(var(--custom-red)),
-    rgb(var(--custom-orange)),
-    rgb(var(--custom-green)),
-    rgb(var(--custom-blue)),
-    rgb(var(--custom-purple)),
-    rgb(var(--custom-red))
-  );
-  background-size: 400% 400%;
-  animation: straight 100s linear infinite;
+@layer base {
+  .gradient-animation-slow {
+    background: linear-gradient(
+      -45deg,
+      rgb(var(--custom-red)),
+      rgb(var(--custom-orange)),
+      rgb(var(--custom-green)),
+      rgb(var(--custom-blue)),
+      rgb(var(--custom-purple)),
+      rgb(var(--custom-red))
+    );
+    background-size: 400% 400%;
+    animation: straight 100s linear infinite;
+  }
 }
