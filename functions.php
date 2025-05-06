@@ -10,6 +10,7 @@ add_action('wp_enqueue_scripts', 'boilerplate_load_assets');
 
 function boilerplate_add_support()
 {
+    register_nav_menu("headerMenuLocation", "Header Menu Location");
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
 }
