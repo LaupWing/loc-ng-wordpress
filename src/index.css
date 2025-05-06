@@ -56,6 +56,28 @@
   animation: straight 10s linear infinite;
 }
 
+.gradient-animation-border {
+  @apply relative p-1 rounded-md overflow-hidden;
+}
+
+.gradient-animation-border::before {
+  content: "";
+  height: 440%;
+  width: 180%;
+  left: -40%;
+  top: -160%;
+  position: absolute;
+  background: conic-gradient(
+    rgb(var(--custom-red)),
+    rgb(var(--custom-orange)),
+    rgb(var(--custom-green)),
+    rgb(var(--custom-blue)),
+    rgb(var(--custom-purple)),
+    rgb(var(--custom-red))
+  );
+  animation: spin 1.5s linear infinite;
+}
+
 @layer base {
   .gradient-animation-slow {
     background: linear-gradient(
