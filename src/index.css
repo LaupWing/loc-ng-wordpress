@@ -21,6 +21,10 @@
 .current-menu-item {
 }
 
+.custom-container {
+  @apply max-w-5xl w-full;
+}
+
 @keyframes straight {
   0% {
     background-position: 0% 50%;
