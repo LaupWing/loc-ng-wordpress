@@ -37,7 +37,7 @@ get_header()
         <h3 class="transition-colors text-5xl pb-2 font-bold gradient-animation-slow bg-clip-text text-transparent">
             Actually useful stuff
         </h3>
-        <ul class="grid mt-4 grid-cols-1 sm:grid-cols-2 gap-6">
+        <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6">
             <?php
             $args = array(
                 "post_type" => "post",
@@ -49,7 +49,7 @@ get_header()
             $query = new WP_Query($args);
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post(); ?>
-                    <li>
+                    <li class="border-b border-gray-100 pb-2">
                         <a class="flex flex-col gap-2 relative" href="<?php the_permalink(); ?>">
                             <!-- Get the categories -->
                             <?php
@@ -73,7 +73,7 @@ get_header()
                             <?php endif; ?>
                             <h2 class="text-3xl text-gray-800 font-bold"><?php the_title(); ?></h2>
                             <!-- get 100 charcaters of the contetn -->
-                            <p class="text-slate-400">
+                            <p class="text-slate-400 text-lg">
                                 <?php
                                 $content = get_the_content();
                                 $content = strip_tags($content);
@@ -81,7 +81,9 @@ get_header()
                                 ?>
                             </p>
                             <div class="flex gap-2 items-center">
-                                <span class="text-xs font-bold text-slate-300"><?php the_author(); ?></span>
+                                <span class="text-xs font-bold text-slate-300">
+                                    Loc Nguyen
+                                </span>
                                 <span class="text-xs text-slate-500"><?php the_date(); ?></span>
                             </div>
                         </a>
