@@ -37,66 +37,64 @@ get_header()
         <h3 class="transition-colors text-4xl font-bold gradient-animation-slow bg-clip-text text-transparent">
             Actually useful stuff
         </h3>
-        <div class="">
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <?php
-                $args = array(
-                    "post_type" => "post",
-                    "post_status" => "publish",
-                    "posts_per_page" => "5",
-                    "order" => "DESC",
-                    "orderby" => "date"
-                );
-                $query = new WP_Query($args);
-                if ($query->have_posts()) :
-                    while ($query->have_posts()) : $query->the_post(); ?>
-                        <li>
-                            <a class="flex flex-col gap-2 relative" href="<?php the_permalink(); ?>">
-                                <!-- Get the categories -->
-                                <?php
-                                $categories = get_the_category();
-                                $available_categories = [
-                                    "fitness" => "bg-green-600",
-                                    "coding" => "bg-blue-600",
-                                    "life" => "bg-yellow-600",
-                                    "meals" => "bg-red-600",
-                                    "mindset" => "bg-purple-600",
-                                ];
-                                if ($categories) {
-                                    if (array_key_exists($categories[0]->slug, $available_categories)) {
-                                        echo '<span class="absolute top-4 left-4 ' . $available_categories[$categories[0]->slug] . ' text-white px-2 py-1 rounded-md text-sm font-bold">' . $categories[0]->name . '</span>';
-                                    } else {
-                                        echo '<span class="absolute top-4 left-4  text-white px-2 py-1 rounded-md text-xs font-bold">' . $categories[0]->name . '</span>';
-                                    }
+        <ul class="grid mt-4 grid-cols-1 sm:grid-cols-2 gap-6">
+            <?php
+            $args = array(
+                "post_type" => "post",
+                "post_status" => "publish",
+                "posts_per_page" => "5",
+                "order" => "DESC",
+                "orderby" => "date"
+            );
+            $query = new WP_Query($args);
+            if ($query->have_posts()) :
+                while ($query->have_posts()) : $query->the_post(); ?>
+                    <li>
+                        <a class="flex flex-col gap-2 relative" href="<?php the_permalink(); ?>">
+                            <!-- Get the categories -->
+                            <?php
+                            $categories = get_the_category();
+                            $available_categories = [
+                                "fitness" => "bg-green-600",
+                                "coding" => "bg-blue-600",
+                                "life" => "bg-yellow-600",
+                                "meals" => "bg-red-600",
+                                "mindset" => "bg-purple-600",
+                            ];
+                            if ($categories) {
+                                if (array_key_exists($categories[0]->slug, $available_categories)) {
+                                    echo '<span class="absolute top-4 left-4 ' . $available_categories[$categories[0]->slug] . ' text-white px-2 py-1 rounded-md text-sm font-bold">' . $categories[0]->name . '</span>';
+                                } else {
+                                    echo '<span class="absolute top-4 left-4  text-white px-2 py-1 rounded-md text-xs font-bold">' . $categories[0]->name . '</span>';
                                 }
-                                ?>
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <img class="aspect-video rounded-lg object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
+                            }
+                            ?>
+                            <?php if (has_post_thumbnail()) : ?>
+                                <img class="aspect-video rounded-lg object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
 
-                                <?php endif; ?>
-                                <h2 class="text-lg text-slate-50"><?php the_title(); ?></h2>
-                                <!-- get 100 charcaters of the contetn -->
-                                <p class="text-slate-400">
-                                    <?php
-                                    $content = get_the_content();
-                                    $content = strip_tags($content);
-                                    echo substr($content, 0, 100);
-                                    ?>
-                                </p>
-                                <div class="flex gap-2 items-center">
-                                    <span class="text-xs font-bold text-slate-300"><?php the_author(); ?></span>
-                                    <span class="text-xs text-slate-500"><?php the_date(); ?></span>
-                                </div>
-                            </a>
-                        </li>
-                    <?php endwhile;
-                else :
-                    ?>
-                    <li>No recent posts found.</li>
-                <?php endif;
-                wp_reset_postdata(); ?>
-            </ul>
-        </div>
+                            <?php endif; ?>
+                            <h2 class="text-3xl text-gray-800 font-bold"><?php the_title(); ?></h2>
+                            <!-- get 100 charcaters of the contetn -->
+                            <p class="text-slate-400">
+                                <?php
+                                $content = get_the_content();
+                                $content = strip_tags($content);
+                                echo substr($content, 0, 100);
+                                ?>
+                            </p>
+                            <div class="flex gap-2 items-center">
+                                <span class="text-xs font-bold text-slate-300"><?php the_author(); ?></span>
+                                <span class="text-xs text-slate-500"><?php the_date(); ?></span>
+                            </div>
+                        </a>
+                    </li>
+                <?php endwhile;
+            else :
+                ?>
+                <li>No recent posts found.</li>
+            <?php endif;
+            wp_reset_postdata(); ?>
+        </ul>
     </section>
 </div>
 <?php
