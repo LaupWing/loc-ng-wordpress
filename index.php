@@ -31,6 +31,14 @@ get_header()
             </div>
         </div>
     </div>
+
+    <section class="py-12 flex flex-col">
+        <span class="text-slate-400 uppercase text-sm tracking-wider">Recent blog posts</span>
+        <h3 class="transition-colors text-4xl font-bold gradient-animation-slow bg-clip-text text-transparent">
+            Actually useful stuff
+        </h3>
+
+    </section>
 </div>
 <?php
 get_footer()
