@@ -49,7 +49,13 @@ get_header()
                 "posts_per_page" => "5",
                 "order" => "DESC",
                 "orderby" => "date",
-
+                "meta_query" => array(
+                    array(
+                        "key" => "is_free",
+                        "value" => '1',
+                        "compare" => "!="
+                    )
+                )
             );
             $query = new WP_Query($args);
             if ($query->have_posts()) :
