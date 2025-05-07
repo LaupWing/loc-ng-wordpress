@@ -16,3 +16,28 @@ function boilerplate_add_support()
 }
 
 add_action('after_setup_theme', 'boilerplate_add_support');
+
+
+function register_product_post_type()
+{
+    register_post_type('product', array(
+        'labels' => array(
+            'name' => 'Products',
+            'singular_name' => 'Product',
+            'add_new' => 'Add New',
+            'add_new_item' => 'Add New Product',
+            'edit_item' => 'Edit Product',
+            'new_item' => 'New Product',
+            'view_item' => 'View Product',
+            'search_items' => 'Search Products',
+            'not_found' => 'No products found',
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'products'),
+        'menu_icon' => 'dashicons-cart',
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+        'show_in_rest' => true // Optional, for block editor
+    ));
+}
+add_action('init', 'register_product_post_type');
