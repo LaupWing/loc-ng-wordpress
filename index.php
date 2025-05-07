@@ -35,7 +35,7 @@ get_header()
     </section>
     <section class="flex flex-col py-8">
         <div class="flex flex-col py-6">
-            <span class="text-slate-400 uppercase text-sm tracking-wider">Recent blog posts</span>
+            <span class="text-slate-400 uppercase text-sm tracking-wider">Featured Products</span>
             <h3 class="transition-colors text-5xl pb-2 font-bold gradient-animation-slow bg-clip-text text-transparent">
                 Actually useful stuff
             </h3>
