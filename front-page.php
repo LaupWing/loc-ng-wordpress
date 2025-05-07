@@ -93,7 +93,7 @@ get_header()
             </h3>
             <p class="max-w-4xl text-gray-700 md:text-lg 2xl:text-xl" data-fade="3">I possess a strong enthusiasm for both programming and fitnes.</p>
         </div>
-        <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6">
+        <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             <?php
             $args = array(
                 "post_type" => "post",
@@ -105,7 +105,7 @@ get_header()
             $query = new WP_Query($args);
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post(); ?>
-                    <li class="border-b border-gray-100 pb-2">
+                    <li class="border rounded overflow-hidden shadow border-gray-100 pb-2">
                         <a class="flex flex-col gap-2 relative" href="<?php the_permalink(); ?>">
                             <!-- Get the categories -->
                             <?php
@@ -124,12 +124,12 @@ get_header()
                             }
                             ?>
                             <?php if (has_post_thumbnail()) : ?>
-                                <img class="aspect-video rounded-lg object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
+                                <img class="aspect-video rounded-lg rounded-b-none object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
 
                             <?php endif; ?>
-                            <h2 class="text-3xl text-gray-800 font-bold"><?php the_title(); ?></h2>
+                            <h2 class="text-2xl text-gray-800 font-bold"><?php the_title(); ?></h2>
                             <!-- get 100 charcaters of the contetn -->
-                            <p class="text-slate-400 text-lg">
+                            <p class="text-slate-400">
                                 <?php
                                 $content = get_the_content();
                                 $content = strip_tags($content);

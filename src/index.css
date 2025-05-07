@@ -2,94 +2,94 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --custom-red: 253 0 76 /* #fd004c */;
-  --custom-orange: 254 144 0 /* #fe9000 */;
-  --custom-green: 62 223 75 /* #3edf4b */;
-  --custom-blue: 51 99 255 /* #3363ff */;
-  --custom-purple: 177 2 183 /* #b102b7 */;
-  --custom-light: 255 255 255;
-  --custom-dark: 14 14 14;
-  --nav-height: 4.5rem;
+    --custom-red: 253 0 76 /* #fd004c */;
+    --custom-orange: 254 144 0 /* #fe9000 */;
+    --custom-green: 62 223 75 /* #3edf4b */;
+    --custom-blue: 51 99 255 /* #3363ff */;
+    --custom-purple: 177 2 183 /* #b102b7 */;
+    --custom-light: 255 255 255;
+    --custom-dark: 14 14 14;
+    --nav-height: 4.5rem;
 }
 
 @theme {
-  --color-dark: rgb(var(--custom-dark));
-  --color-light: rgb(var(--custom-light));
+    --color-dark: rgb(var(--custom-dark));
+    --color-light: rgb(var(--custom-light));
 }
 
 .menu {
-  @apply flex gap-10;
+    @apply flex gap-10;
 }
 #mobile .menu {
-  @apply text-slate-500 flex flex-col gap-10;
+    @apply flex flex-col gap-10 text-slate-500;
 }
 .current-menu-item {
 }
 
 .custom-container {
-  @apply max-w-5xl w-full;
+    @apply w-full max-w-7xl;
 }
 
 @keyframes straight {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .gradient-animation {
-  background: linear-gradient(
-    -45deg,
-    rgb(var(--custom-red)),
-    rgb(var(--custom-orange)),
-    rgb(var(--custom-green)),
-    rgb(var(--custom-blue)),
-    rgb(var(--custom-purple)),
-    rgb(var(--custom-red))
-  );
-  background-size: 400% 400%;
-  animation: straight 10s linear infinite;
+    background: linear-gradient(
+        -45deg,
+        rgb(var(--custom-red)),
+        rgb(var(--custom-orange)),
+        rgb(var(--custom-green)),
+        rgb(var(--custom-blue)),
+        rgb(var(--custom-purple)),
+        rgb(var(--custom-red))
+    );
+    background-size: 400% 400%;
+    animation: straight 10s linear infinite;
 }
 
 .gradient-animation-border {
-  @apply relative p-1 rounded-md overflow-hidden;
+    @apply relative overflow-hidden rounded-md p-1;
 }
 
 .gradient-animation-border::before {
-  content: "";
-  height: 440%;
-  width: 180%;
-  left: -40%;
-  top: -160%;
-  position: absolute;
-  background: conic-gradient(
-    rgb(var(--custom-red)),
-    rgb(var(--custom-orange)),
-    rgb(var(--custom-green)),
-    rgb(var(--custom-blue)),
-    rgb(var(--custom-purple)),
-    rgb(var(--custom-red))
-  );
-  animation: spin 1.5s linear infinite;
+    content: "";
+    height: 440%;
+    width: 180%;
+    left: -40%;
+    top: -160%;
+    position: absolute;
+    background: conic-gradient(
+        rgb(var(--custom-red)),
+        rgb(var(--custom-orange)),
+        rgb(var(--custom-green)),
+        rgb(var(--custom-blue)),
+        rgb(var(--custom-purple)),
+        rgb(var(--custom-red))
+    );
+    animation: spin 1.5s linear infinite;
 }
 
 @layer base {
-  .gradient-animation-slow {
-    background: linear-gradient(
-      -45deg,
-      rgb(var(--custom-red)),
-      rgb(var(--custom-orange)),
-      rgb(var(--custom-green)),
-      rgb(var(--custom-blue)),
-      rgb(var(--custom-purple)),
-      rgb(var(--custom-red))
-    );
-    background-size: 400% 400%;
-    animation: straight 100s linear infinite;
-  }
+    .gradient-animation-slow {
+        background: linear-gradient(
+            -45deg,
+            rgb(var(--custom-red)),
+            rgb(var(--custom-orange)),
+            rgb(var(--custom-green)),
+            rgb(var(--custom-blue)),
+            rgb(var(--custom-purple)),
+            rgb(var(--custom-red))
+        );
+        background-size: 400% 400%;
+        animation: straight 100s linear infinite;
+    }
 }
