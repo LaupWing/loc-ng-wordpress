@@ -55,15 +55,13 @@ get_header()
                             <?php
                             $categories = get_the_category();
                             $available_categories = [
-                                "fitness" => "bg-green-600",
+                                "fitness" => "bg-emerald-600/60",
                                 "coding" => "bg-blue-600",
-                                "life" => "bg-yellow-600",
-                                "meals" => "bg-red-600",
                                 "mindset" => "bg-purple-600",
                             ];
                             if ($categories) {
                                 if (array_key_exists($categories[0]->slug, $available_categories)) {
-                                    echo '<span class="absolute top-4 left-4 ' . $available_categories[$categories[0]->slug] . ' text-white px-2 py-1 rounded-md text-sm font-bold">' . $categories[0]->name . '</span>';
+                                    echo '<span class="absolute top-4 left-4 ' . $available_categories[$categories[0]->slug] . ' text-white backdrop-blur-md px-2 py-1 rounded-md text-xs tracking-wider uppercase font-bold">' . $categories[0]->name . '</span>';
                                 } else {
                                     echo '<span class="absolute top-4 left-4  text-white px-2 py-1 rounded-md text-xs font-bold">' . $categories[0]->name . '</span>';
                                 }
