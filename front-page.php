@@ -105,8 +105,8 @@ get_header()
             $query = new WP_Query($args);
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post(); ?>
-                    <li class="border rounded overflow-hidden shadow border-gray-100 pb-2">
-                        <a class="flex flex-col gap-2 relative" href="<?php the_permalink(); ?>">
+                    <li class="border rounded flex flex-col overflow-hidden shadow border-gray-200 pb-2">
+                        <a class="flex flex-col flex-1 gap-2 relative" href="<?php the_permalink(); ?>">
                             <!-- Get the categories -->
                             <?php
                             $categories = get_the_category();
@@ -127,22 +127,24 @@ get_header()
                                 <img class="aspect-video rounded-lg rounded-b-none object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
 
                             <?php endif; ?>
-                            <h2 class="text-2xl text-gray-800 font-bold"><?php the_title(); ?></h2>
-                            <!-- get 100 charcaters of the contetn -->
-                            <p class="text-slate-400">
-                                <?php
-                                $content = get_the_content();
-                                $content = strip_tags($content);
-                                echo substr($content, 0, 100);
-                                ?>
-                            </p>
-                            <div class="flex gap-2 items-center">
-                                <span class="text-xs font-bold text-slate-300">
-                                    Loc Nguyen
-                                </span>
-                                <span class="text-xs text-slate-500"><?php the_date(); ?></span>
+                            <div class="flex flex-col flex-1 gap-2 p-2">
+                                <h2 class="text-2xl text-gray-800 font-bold"><?php the_title(); ?></h2>
+                                <!-- get 100 charcaters of the contetn -->
+                                <p class="text-slate-400">
+                                    <?php
+                                    $content = get_the_content();
+                                    $content = strip_tags($content);
+                                    echo substr($content, 0, 100);
+                                    ?>
+                                </p>
+                                <div class="flex gap-2 items-center">
+                                    <span class="text-xs font-bold text-slate-300">
+                                        Loc Nguyen
+                                    </span>
+                                    <span class="text-xs text-slate-500"><?php the_date(); ?></span>
+                                </div>
+                                <span class="underline italic mt-auto block text-slate-300 font-bold">Read more</span>
                             </div>
-                            <span class="underline italic text-slate-300 font-bold">Read more</span>
                         </a>
                     </li>
                 <?php endwhile;
