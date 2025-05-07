@@ -44,12 +44,12 @@ get_header()
         <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6">
             <?php
             $args = array(
-                "post_type" => "post",
+                "post_type" => "product",
                 "post_status" => "publish",
                 "posts_per_page" => "5",
                 "order" => "DESC",
                 "orderby" => "date",
-                "category__in" => array(get_cat_ID('product')) // Include only 'product' category
+
             );
             $query = new WP_Query($args);
             if ($query->have_posts()) :
