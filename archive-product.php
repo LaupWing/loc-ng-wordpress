@@ -13,17 +13,8 @@ get_header()
         </div>
         <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6">
             <?php
-            $args = array(
-                "post_type" => "product",
-                "post_status" => "publish",
-                "posts_per_page" => "5",
-                "order" => "DESC",
-                "orderby" => "date",
-
-            );
-            $query = new WP_Query($args);
-            if ($query->have_posts()) :
-                while ($query->have_posts()) : $query->the_post(); ?>
+            if (have_posts()) :
+                while (have_posts()) : the_post(); ?>
                     <li>
                         <a class="flex flex-col gap-2 relative" href="<?php the_permalink(); ?>">
                             <?php if (has_post_thumbnail()) : ?>
