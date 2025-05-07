@@ -18,7 +18,7 @@ get_header()
     </h1>
     <p class="mt-4 max-w-4xl text-gray-700 md:mt-6 md:text-lg 2xl:text-xl" data-fade="3">I possess a strong enthusiasm for both programming and fitness, finding fulfillment in assisting individuals either at the gym or in the realm of coding.</p>
     <div class="mt-8 flex bg-gray-100 border border-gray-200 relative p-2 rounded-md flex-wrap gap-1  w-full max-w-md" data-fade="4">
-        <label for="email" class="absolute -top-6 left-0 text-gray-300 bg-gray-100 text-sm font-bold rounded-t px-2 uppercase pb-1 border border-gray-200 border-b-0">
+        <label for="email" class="absolute -top-5 left-0 text-gray-300 bg-gray-100 text-xs font-bold rounded-t px-2 uppercase pb-1 border border-gray-200 border-b-0">
             Your email
         </label>
         <input type="text" class="rounded flex-1 bg-white text-gray-700 placeholder:text-gray-400 px-2 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-custom-green focus:ring-opacity-50" placeholder="Enter your email..." />
