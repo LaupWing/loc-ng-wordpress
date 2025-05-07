@@ -94,8 +94,7 @@ get_header()
                 "post_status" => "publish",
                 "posts_per_page" => "5",
                 "order" => "DESC",
-                "orderby" => "date",
-                "category__not_in" => array(get_cat_ID('product')) // Exclude 'product' category
+                "orderby" => "date"
             );
             $query = new WP_Query($args);
             if ($query->have_posts()) :
