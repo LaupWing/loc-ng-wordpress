@@ -90,6 +90,7 @@ get_header()
                                 </span>
                                 <span class="text-xs text-slate-500"><?php the_date(); ?></span>
                             </div>
+                            <span class="underline italic text-slate-300 font-bold">Read more</span>
                         </a>
                     </li>
                 <?php endwhile;
