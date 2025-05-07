@@ -34,7 +34,7 @@ get_header()
 
     <section class="py-12 flex flex-col">
         <span class="text-slate-400 uppercase text-sm tracking-wider">Recent blog posts</span>
-        <h3 class="transition-colors text-4xl font-bold gradient-animation-slow bg-clip-text text-transparent">
+        <h3 class="transition-colors text-5xl pb-2 font-bold gradient-animation-slow bg-clip-text text-transparent">
             Actually useful stuff
         </h3>
         <ul class="grid mt-4 grid-cols-1 sm:grid-cols-2 gap-6">
