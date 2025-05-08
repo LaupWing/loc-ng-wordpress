@@ -68,6 +68,11 @@ get_header()
                                 <img class="aspect-video rounded-lg object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
 
                             <?php endif; ?>
+                            <?php if (get_field('is_free')) : ?>
+                                <span class="absolute top-4 left-4 bg-emerald-600/60 text-white backdrop-blur-md px-2 py-1 rounded-md text-xs tracking-wider uppercase font-bold">Free</span>
+                            <?php else : ?>
+                                <span class="absolute top-4 left-4 bg-purple-600 text-white backdrop-blur-md px-2 py-1 rounded-md text-xs tracking-wider uppercase font-bold">Paid</span>
+                            <?php endif; ?>
                             <h2 class="text-3xl text-gray-800 font-bold"><?php the_title(); ?></h2>
                             <!-- get 100 charcaters of the contetn -->
                             <p class="text-slate-400 text-lg">
