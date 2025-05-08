@@ -64,6 +64,11 @@ get_header()
                 while ($query->have_posts()) : $query->the_post(); ?>
                     <li>
                         <a class="flex flex-col gap-2 relative" href="<?php the_permalink(); ?>">
+                            <?php
+                            get_template_part("templates/icons/link", null, [
+                                "custom_class" => "absolute top-4 right-4 w-8 h-8 text-white"
+                            ]);
+                            ?>
                             <?php if (has_post_thumbnail()) : ?>
                                 <img class="aspect-video rounded-lg object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
 
