@@ -71,7 +71,9 @@ get_header()
                             <?php if (get_field('is_free')) : ?>
                                 <span class="absolute top-4 left-4 bg-emerald-600/60 text-white backdrop-blur-md px-2 py-1 rounded-md text-xs tracking-wider uppercase font-bold">Free</span>
                             <?php else : ?>
-                                <span class="absolute top-4 left-4 bg-purple-600 text-white backdrop-blur-md px-2 py-1 rounded-md text-xs tracking-wider uppercase font-bold">Paid</span>
+                                <span class="absolute top-4 left-4 bg-white/80 text-black backdrop-blur-md px-2 py-1 rounded-md tracking-wider uppercase font-bold">
+                                    $<?php echo get_field('price'); ?>
+                                </span>
                             <?php endif; ?>
                             <h2 class="text-3xl text-gray-800 font-bold"><?php the_title(); ?></h2>
                             <!-- get 100 charcaters of the contetn -->
