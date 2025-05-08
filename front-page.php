@@ -39,7 +39,9 @@ get_header()
             <h3 class="transition-colors text-5xl pb-2 font-bold gradient-animation-slow bg-clip-text text-transparent">
                 Actually useful stuff
             </h3>
-            <p class="max-w-4xl text-gray-700 md:text-lg 2xl:text-xl" data-fade="3">I possess a strong enthusiasm for both programming and fitnes.</p>
+            <p class="max-w-4xl text-gray-700 md:text-lg 2xl:text-xl" data-fade="3">
+                Built from decades of experience in fitness, coding, and self-mastery — no fluff, just tools that work.
+            </p>
         </div>
         <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6">
             <?php
@@ -92,9 +94,11 @@ get_header()
         <div class="flex flex-col py-6">
             <span class="text-slate-400 uppercase text-sm tracking-wider">Recent blog posts</span>
             <h3 class="transition-colors text-5xl pb-2 font-bold gradient-animation-slow bg-clip-text text-transparent">
-                Actually useful stuff
+                Actionable. Real. Timeless.
             </h3>
-            <p class="max-w-4xl text-gray-700 md:text-lg 2xl:text-xl" data-fade="3">I possess a strong enthusiasm for both programming and fitnes.</p>
+            <p class="max-w-4xl text-gray-700 md:text-lg 2xl:text-xl" data-fade="3">
+                I share hard-earned insights on self-mastery, fitness, and spiritual growth — not theory, not trivia, just what actually works from real experience.
+            </p>
         </div>
         <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             <?php
