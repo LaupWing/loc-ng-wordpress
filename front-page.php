@@ -108,7 +108,7 @@ get_header()
             $query = new WP_Query($args);
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post(); ?>
-                    <li class="border rounded flex flex-col overflow-hidden shadow border-gray-200">
+                    <li class="border rounded-md flex flex-col overflow-hidden shadow border-gray-200">
                         <a class="flex flex-col flex-1 gap-2 relative" href="<?php the_permalink(); ?>">
                             <!-- Get the categories -->
                             <?php
@@ -127,7 +127,7 @@ get_header()
                             }
                             ?>
                             <?php if (has_post_thumbnail()) : ?>
-                                <img class="aspect-video rounded-lg rounded-b-none object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
+                                <img class="aspect-video rounded-b-none object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
 
                             <?php endif; ?>
                             <div class="flex flex-col flex-1 gap-2 p-4 pb-1">
