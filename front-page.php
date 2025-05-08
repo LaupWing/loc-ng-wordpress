@@ -108,7 +108,7 @@ get_header()
             $query = new WP_Query($args);
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post(); ?>
-                    <li class="border rounded flex flex-col overflow-hidden shadow border-gray-200 pb-2">
+                    <li class="border rounded flex flex-col overflow-hidden shadow border-gray-200">
                         <a class="flex flex-col flex-1 gap-2 relative" href="<?php the_permalink(); ?>">
                             <!-- Get the categories -->
                             <?php
@@ -130,7 +130,7 @@ get_header()
                                 <img class="aspect-video rounded-lg rounded-b-none object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
 
                             <?php endif; ?>
-                            <div class="flex flex-col flex-1 gap-2 p-2">
+                            <div class="flex flex-col flex-1 gap-2 p-4 pb-1">
                                 <h2 class="text-2xl text-gray-800 font-bold"><?php the_title(); ?></h2>
                                 <!-- get 100 charcaters of the contetn -->
                                 <p class="text-slate-400">
@@ -146,7 +146,7 @@ get_header()
                                     </span>
                                     <span class="text-xs text-slate-500"><?php the_date(); ?></span>
                                 </div>
-                                <span class="underline italic mt-auto block text-slate-300 font-bold">Read more</span>
+                                <span class="mt-auto pt-3 block text-xs uppercase text-slate-200 font-bold">Read more</span>
                             </div>
                         </a>
                     </li>
