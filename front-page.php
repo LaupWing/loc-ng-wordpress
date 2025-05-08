@@ -100,7 +100,7 @@ get_header()
                 I share hard-earned insights on self-mastery, fitness, and spiritual growth — not theory, not trivia, just what actually works from real experience.
             </p>
         </div>
-        <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php
             $args = array(
                 "post_type" => "post",
