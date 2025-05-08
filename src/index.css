@@ -93,3 +93,30 @@
         animation: straight 100s linear infinite;
     }
 }
+
+@layer components {
+    .current-menu-item {
+        @apply relative;
+    }
+
+    .current-menu-item::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        @apply shadow;
+        background: linear-gradient(
+            -45deg,
+            rgb(var(--custom-red)),
+            rgb(var(--custom-orange)),
+            rgb(var(--custom-green)),
+            rgb(var(--custom-blue)),
+            rgb(var(--custom-purple)),
+            rgb(var(--custom-red))
+        );
+        background-size: 400% 400%;
+        animation: straight 100s linear infinite;
+    }
+}
