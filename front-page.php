@@ -10,7 +10,7 @@ get_header()
             </div>
         </div>
         <span class="text-slate-400 uppercase text-sm tracking-wider">Loc Nguyen</span>
-        <h1 class="font-bold max-w-sm text-3xl md:text-5xl 2xl:text-6xl" data-fade="2">Do what works. Enjoy
+        <h1 class="font-bold max-w-sm text-4xl md:text-5xl 2xl:text-6xl" data-fade="2">Do what works. Enjoy
             <div class="inline-block text-light py-0.5">
                 <span class="transition-colors gradient-animation-slow bg-clip-text text-transparent">
                     Life.
@@ -39,7 +39,7 @@ get_header()
     <section class="flex flex-col py-8">
         <div class="flex flex-col py-6">
             <span class="text-slate-400 uppercase text-sm tracking-wider">Featured Products</span>
-            <h3 class="transition-colors text-5xl pb-2 font-bold gradient-animation-slow bg-clip-text text-transparent">
+            <h3 class="transition-colors text-4xl md:text-5xl 2xl:text-6xl pb-2 font-bold gradient-animation-slow bg-clip-text text-transparent">
                 Actually useful stuff
             </h3>
             <p class="max-w-4xl text-gray-700 md:text-lg 2xl:text-xl" data-fade="3">
