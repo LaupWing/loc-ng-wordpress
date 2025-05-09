@@ -47,11 +47,8 @@ add_action('template_redirect', 'handle_subscribe_form');
 function handle_subscribe_form()
 {
 
-    // Only run this logic when the request is a POST to the /subscribe page
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['subscribe_submit'])) {
-        error_log('Subscribe form handler triggered');
+    if (is_page('subscribe') && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['subscribe_submit'])) {
         $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
-        error_log('Email: ' . $email);
         if (!is_email($email)) {
             wp_die('Invalid email address.');
         }
@@ -65,7 +62,7 @@ function handle_subscribe_form()
                 'Content-Type'  => 'application/json',
             ),
         ));
-        error_log('API Response: ' . print_r($response, true));
+
         if (is_wp_error($response)) {
             wp_die('API request failed.');
         }
