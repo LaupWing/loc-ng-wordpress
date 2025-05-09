@@ -6,20 +6,19 @@ on:
       - main
 
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  ftp-deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4
-    
-    - name: 📂 Sync files
-      uses: appleboy/sftp-action@v0.1.4
-      with:
-          host: ${{ secrets.FTP_SERVER }}
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          target: ${{ secrets.FTP_SERVER_DIR }}
-          source: ./  # 🔥 Use current directory (theme is the repo root)
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          local-dir: ./  # 🔥 Use current directory (theme is the repo root)
           protocol: ftps
-          port: 22
