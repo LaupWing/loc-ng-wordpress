@@ -46,7 +46,7 @@ add_action('template_redirect', 'handle_subscribe_form');
 
 function handle_subscribe_form()
 {
-    echo '<test';
+    error_log('Subscribe form handler triggered');
     // Only run this logic when the request is a POST to the /subscribe page
     if (is_page('subscribe') && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['subscribe_submit'])) {
         $email = isset($_POST['subscriber_email']) ? sanitize_email($_POST['subscriber_email']) : '';
