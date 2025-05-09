@@ -76,7 +76,7 @@
 
 <body class="bg-white min-h-screen" <?php body_class() ?>>
     <div class="gradient-animation w-full h-1.5 bg-red-400"></div>
-    <div class="flex flex-col items-center px-6 sm:px-14 py-2 sm:py-6">
+    <div class="flex flex-col items-center px-4 sm:px-14 py-2 sm:py-6">
 
         <header class="hidden sm:flex justify-between items-center custom-container w-full">
             <nav class="font-cursive gap-4 flex items-center w-full justify-between">
@@ -97,10 +97,10 @@
                 ?>
             </nav>
         </header>
-        <header class="grid grid-cols-3 sm:hidden justify-between items-center custom-container text-slate-300">
+        <header class="grid grid-cols-3 sm:hidden justify-between items-center custom-container ">
             <button id="mobile-menu">
                 <?php
-                $custom_class = "text-slate-50 w-8 h-8";
+                $custom_class = "w-8 h-8";
                 get_template_part("templates/ui/menu", null, array(
                     "custom_class" => $custom_class
                 ));
