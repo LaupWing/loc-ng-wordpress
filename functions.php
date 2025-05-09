@@ -41,3 +41,16 @@ function register_product_post_type()
     ));
 }
 add_action('init', 'register_product_post_type');
+
+
+function sort_products_by_free_field($query)
+{
+    if (!is_admin() && $query->is_main_query() && is_post_type_archive('product')) {
+
+        // Modify the query to sort by the ACF 'free' field (false first, true last)
+        $query->set('meta_key', 'is_free');
+        $query->set('orderby', 'meta_value_num'); // 'free' should be stored as 1/0
+        $query->set('order', 'ASC'); // false (0) comes before true (1)
+    }
+}
+add_action('pre_get_posts', 'sort_products_by_free_field');
