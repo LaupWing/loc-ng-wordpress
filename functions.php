@@ -42,54 +42,38 @@ function register_product_post_type()
 }
 add_action('init', 'register_product_post_type');
 
-function subscribe_endpoint_callback($request)
+add_action('template_redirect', 'handle_subscribe_form');
+
+function handle_subscribe_form()
 {
-    $params = $request->get_params();
+    echo '<test';
+    // Only run this logic when the request is a POST to the /subscribe page
+    if (is_page('subscribe') && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['subscribe_submit'])) {
+        $email = isset($_POST['subscriber_email']) ? sanitize_email($_POST['subscriber_email']) : '';
 
-    if (empty($params["email"])) {
-        return new WP_REST_Response(array(
-            "success" => false,
-            "message" => "Email is required"
-        ), 400);
-    }
-    $email = sanitize_email($params["email"] ?? "");
-    $api_key = defined("BEEHIVE_API_KEY") ? BEEHIVE_API_KEY : "";
-    $api_response = wp_remote_post(BEEHIVE_API_URL, array(
-        "body" => json_encode(array(
-            "email" => $email
-        )),
-        "headers" => array(
-            "Authorization" => "Bearer $api_key",
-            "Content-Type" => "application/json"
-        )
-    ));
-    if (is_wp_error($api_response)) {
-        return new WP_REST_Response(array(
-            "success" => false,
-            "message" => "An api error occurred"
-        ), 500);
-    }
-    $response = array(
-        "success" => true,
-        "message" => "Data received successfully and sended to api",
-        "data" => array(
-            "email" => $email,
-            // "api_response" => json_decode(wp_remote_retrieve_body($api_response)),
-        )
-    );
-
-    return new WP_REST_Response($response, 200);
-}
-
-add_action("rest_api_init", function () {
-    register_rest_route("loc-ng/v1", "/subscribe", array(
-        "methods" => "POST",
-        "callback" => "subscribe_endpoint_callback",
-        "permission_callback" => function ($request) {
-            return wp_verify_nonce($request->get_header("X-WP-Nonce"), "wp_rest");
+        if (!is_email($email)) {
+            wp_die('Invalid email address.');
         }
-    ));
-});
+
+        $api_key = defined("BEEHIVE_API_KEY") ? BEEHIVE_API_KEY : "";
+
+        $response = wp_remote_post(BEEHIVE_API_URL, array(
+            'body' => json_encode(['email' => $email]),
+            'headers' => array(
+                'Authorization' => 'Bearer ' . $api_key,
+                'Content-Type'  => 'application/json',
+            ),
+        ));
+
+        if (is_wp_error($response)) {
+            wp_die('API request failed.');
+        }
+
+        // Redirect after success
+        wp_redirect(home_url('/confirmed-email'));
+        exit;
+    }
+}
 
 
 function sort_products_by_free_field($query)
