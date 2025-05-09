@@ -22,48 +22,7 @@ get_header()
             $query = new WP_Query($args);
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post(); ?>
-                    <li class="border rounded-md flex flex-col overflow-hidden shadow border-gray-200">
-                        <a class="flex flex-col flex-1 gap-2 relative" href="<?php the_permalink(); ?>">
-                            <!-- Get the categories -->
-                            <?php
-                            $categories = get_the_category();
-                            $available_categories = [
-                                "fitness" => "bg-emerald-600/60",
-                                "coding" => "bg-blue-600",
-                                "mindset" => "bg-purple-600",
-                            ];
-                            if ($categories) {
-                                if (array_key_exists($categories[0]->slug, $available_categories)) {
-                                    echo '<span class="absolute top-4 left-4 ' . $available_categories[$categories[0]->slug] . ' text-white backdrop-blur-md px-2 py-1 rounded-md text-xs tracking-wider uppercase font-bold">' . $categories[0]->name . '</span>';
-                                } else {
-                                    echo '<span class="absolute top-4 left-4  text-white px-2 py-1 rounded-md text-xs font-bold">' . $categories[0]->name . '</span>';
-                                }
-                            }
-                            ?>
-                            <?php if (has_post_thumbnail()) : ?>
-                                <img class="aspect-video rounded-b-none object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
-
-                            <?php endif; ?>
-                            <div class="flex flex-col flex-1 gap-2 p-4 pb-1">
-                                <h2 class="text-2xl text-gray-800 font-bold"><?php the_title(); ?></h2>
-                                <!-- get 100 charcaters of the contetn -->
-                                <p class="text-slate-400">
-                                    <?php
-                                    $content = get_the_content();
-                                    $content = strip_tags($content);
-                                    echo substr($content, 0, 100);
-                                    ?>
-                                </p>
-                                <div class="flex gap-2 items-center">
-                                    <span class="text-xs font-bold text-slate-300">
-                                        Loc Nguyen
-                                    </span>
-                                    <span class="text-xs text-slate-500"><?php the_date(); ?></span>
-                                </div>
-                                <span class="mt-auto pt-3 block text-xs uppercase text-slate-200 font-bold">Read more</span>
-                            </div>
-                        </a>
-                    </li>
+                    <?php get_template_part('templates/cards/blog'); ?>
                 <?php endwhile;
             else :
                 ?>
