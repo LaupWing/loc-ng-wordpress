@@ -78,6 +78,30 @@
     animation: spin 1.5s linear infinite;
 }
 
+#content p {
+    @apply mb-6;
+}
+#content strong {
+    @apply font-bold;
+}
+#content h2 {
+    @apply mb-6 text-3xl font-bold;
+}
+#content h3 {
+    @apply mb-6 text-2xl font-bold;
+}
+#content h4 {
+    @apply mb-6 text-xl font-bold;
+}
+
+#content li {
+    @apply mb-4 list-inside list-disc;
+}
+
+#content a {
+    @apply text-blue-500 underline;
+}
+
 @layer base {
     .gradient-animation-slow {
         background: linear-gradient(

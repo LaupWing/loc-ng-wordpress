@@ -14,7 +14,7 @@ get_header()
         </div>
 
     </section>
-    <article class="flex flex-col items-center sm:flex-row mt-10">
+    <article class="flex flex-col items-center sm:flex-row sm:mt-10">
         <div class="flex flex-col justify-center flex-shrink-0 items-center">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/profile.jpg" alt="Loc" class="mx-auto rounded-full flex-shrink-0 w-72 h-72 sm:w-80 sm:h-80 border-[5px] border-slate-50 object-cover mb-10" />
             <ul class="flex gap-4 mb-4 text-slate-300 justify-center">
