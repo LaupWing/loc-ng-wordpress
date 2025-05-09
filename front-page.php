@@ -72,7 +72,7 @@ get_header()
             wp_reset_postdata(); ?>
         </ul>
         <a class="mt-6" href="/products">
-            <button class="rounded font-bold px-4 scale-100 bg-light text-gray-600 disabled:bg-gray-200 py-2 border border-gray-300 focus:outline-none focus-visible:ring focus-visible:ring-accent shadow-sm hover:scale-[1.03] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 transition duration-100 cursor-pointer">See all products</button>
+            <?php get_template_part('templates/ui/button', null, ['button_text' => 'See all products']); ?>
         </a>
     </section>
     <section class="flex flex-col py-8">

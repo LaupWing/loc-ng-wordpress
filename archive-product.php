@@ -17,23 +17,7 @@ get_header()
             <?php
             if (have_posts()) :
                 while (have_posts()) : the_post(); ?>
-                    <li>
-                        <a class="flex flex-col gap-2 relative" href="<?php the_permalink(); ?>">
-                            <?php if (has_post_thumbnail()) : ?>
-                                <img class="aspect-video rounded-lg object-cover" src="<?php the_post_thumbnail_url() ?>" alt="thumbnail photo">
-
-                            <?php endif; ?>
-                            <h2 class="text-3xl text-gray-800 font-bold"><?php the_title(); ?></h2>
-                            <!-- get 100 charcaters of the contetn -->
-                            <p class="text-slate-400 text-lg">
-                                <?php
-                                $content = get_the_content();
-                                $content = strip_tags($content);
-                                echo substr($content, 0, 100);
-                                ?>
-                            </p>
-                        </a>
-                    </li>
+                    <?php get_template_part('templates/cards/product'); ?>
                 <?php endwhile;
             else :
                 ?>
