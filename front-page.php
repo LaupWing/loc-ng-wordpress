@@ -46,7 +46,7 @@ get_header()
             </div>
         </form>
     </section>
-    <section class="flex flex-col py-8">
+    <section class="flex flex-col py-8" data-fade="6">
         <?php
         get_template_part('templates/sections/intro', null, [
             'section_label' => 'Featured Products',
@@ -85,7 +85,7 @@ get_header()
             <?php get_template_part('templates/ui/button', null, ['button_text' => 'See all products']); ?>
         </a>
     </section>
-    <section class="flex flex-col py-8">
+    <section class="flex flex-col py-8" data-fade="7">
         <?php
         get_template_part('templates/sections/intro', null, [
             'section_label' => 'Recent blog posts',
