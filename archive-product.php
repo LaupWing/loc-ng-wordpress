@@ -8,10 +8,11 @@ get_header()
         get_template_part('templates/sections/intro', null, [
             'section_label' => 'Products',
             'headline' => 'Actually useful stuff.',
-            'description' => 'Built from decades of experience in fitness, coding, and self-mastery — no fluff, just tools that work.'
+            'description' => 'Built from decades of experience in fitness, coding, and self-mastery — no fluff, just tools that work.',
+            'fade_in' => true
         ]);
         ?>
-        <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6">
+        <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6" data-fade="4">
             <?php
             if (have_posts()) :
                 while (have_posts()) : the_post(); ?>
