@@ -3,26 +3,26 @@ get_header()
 ?>
 <div class="custom-container flex items-start flex-col">
     <section class="py-20 flex items-start flex-col">
-        <div class="p-1.5 bg-emerald-100 rounded-full mb-4">
+        <div class="p-1.5 bg-emerald-100 rounded-full mb-4" data-fade="1">
             <div class="h-full px-3 py-1 bg-emerald-300 flex items-center rounded-full gap-2">
                 <div class="h-2 w-2 rounded-full bg-lime-300 shadow-lime-200 shadow-lg animate-pulse"></div>
                 <h2 class="text-white text-xs font-bold uppercase">Products to improve your life</h2>
             </div>
         </div>
-        <span class="text-slate-400 uppercase text-sm tracking-wider">Loc Nguyen</span>
-        <h1 class="font-bold max-w-sm text-4xl md:text-5xl 2xl:text-6xl" data-fade="2">Do what works. Enjoy
+        <span class="text-slate-400 uppercase text-sm tracking-wider" data-fade="2">Loc Nguyen</span>
+        <h1 class="font-bold max-w-sm text-4xl md:text-5xl 2xl:text-6xl" data-fade="3">Do what works. Enjoy
             <div class="inline-block text-light py-0.5">
                 <span class="transition-colors gradient-animation-slow bg-clip-text text-transparent">
                     Life.
                 </span>
             </div>
         </h1>
-        <p class="mt-4 max-w-4xl text-gray-700 md:mt-6 md:text-lg 2xl:text-xl" data-fade="3">I possess a strong enthusiasm for both programming and fitness, finding fulfillment in assisting individuals either at the gym or in the realm of coding.</p>
+        <p class="mt-4 max-w-4xl text-gray-700 md:mt-6 md:text-lg 2xl:text-xl" data-fade="4">I possess a strong enthusiasm for both programming and fitness, finding fulfillment in assisting individuals either at the gym or in the realm of coding.</p>
         <form
             method="post"
             action="<?php echo esc_url(home_url('/subscribe')); ?>"
             class="mt-8 flex bg-gray-100 border border-gray-200 relative p-2 rounded-md flex-wrap sm:gap-1 gap-2 w-full max-w-md"
-            data-fade="4">
+            data-fade="5">
             <label for="email" class="absolute -top-5 left-0 text-gray-300 bg-gray-100 text-xs font-bold rounded-t px-2 uppercase pb-1 border border-gray-200 border-b-0">
                 Your email
             </label>
