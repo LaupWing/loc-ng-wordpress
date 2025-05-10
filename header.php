@@ -74,7 +74,7 @@
     <?php wp_head() ?>
 </head>
 
-<body class="bg-white min-h-screen" <?php body_class() ?>>
+<body class="bg-white min-h-screen fade-in-start" <?php body_class() ?>>
     <div class="gradient-animation w-full h-1.5 bg-red-400"></div>
     <div class="flex flex-col items-center px-4 sm:px-14 py-2 sm:py-6">
 
