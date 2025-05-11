@@ -6711,6 +6711,13 @@ if (document.querySelector(".theme-button")) {
   const root = react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot(document.querySelector(".theme-button"));
   root.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_ThemeButton__WEBPACK_IMPORTED_MODULE_1__.ThemeButton, {}));
 }
+if (/^\/blogs\/[a-zA-Z]+\/.*$/.test(window.location.pathname)) {
+  document.querySelectorAll(".menu li").forEach(li => {
+    if (li.textContent?.includes("Blogs")) {
+      li.classList.add("current-menu-item");
+    }
+  });
+}
 })();
 
 /******/ })()
