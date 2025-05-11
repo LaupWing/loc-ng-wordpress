@@ -79,7 +79,7 @@
     <div class="flex flex-col items-center px-4 sm:px-14 py-2 sm:py-6">
 
         <header class="hidden sm:flex justify-between items-center custom-container w-full">
-            <nav class="font-cursive gap-4 flex items-center w-full justify-between">
+            <nav class="font-cursive gap-4 flex items-center w-full">
                 <h1>
                     <a href="<?php echo esc_url(home_url()); ?>">
                         <?php
@@ -96,6 +96,7 @@
                 ]);
                 ?>
             </nav>
+            <div class="theme-button"></div>
         </header>
         <header class="grid grid-cols-3 sm:hidden justify-between items-center custom-container ">
             <button id="mobile-menu">

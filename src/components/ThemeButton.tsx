@@ -34,7 +34,7 @@ export const ThemeButton = () => {
     return (
         <button
             suppressHydrationWarning
-            className="relative flex w-16 overflow-hidden rounded-full bg-gray-300 p-1 dark:bg-gray-600"
+            className="relative flex h-9 w-17 overflow-hidden rounded-full bg-gray-300 p-1 dark:bg-gray-300"
             onClick={toggleSwitch}
         >
             <div ref={knobRef} className="absolute top-1 left-1 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-md">
