@@ -101,7 +101,7 @@
         <header class="grid grid-cols-3 sm:hidden justify-between items-center custom-container ">
             <button id="mobile-menu">
                 <?php
-                $custom_class = "w-8 h-8";
+                $custom_class = "w-8 h-8 dark:text-white text-black";
                 get_template_part("templates/ui/menu", null, array(
                     "custom_class" => $custom_class
                 ));
@@ -118,7 +118,7 @@
                     ?>
                 </a>
             </h1>
-            <div></div>
+            <div class="theme-button ml-auto"></div>
         </header>
         <div id="side-nav" class="fixed sm:hidden transform -translate-x-full inset-0 p-10 bg-slate-900 z-[100] duration-500">
             <nav id="mobile" class="font-cursive flex flex-col">

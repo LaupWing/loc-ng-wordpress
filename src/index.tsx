@@ -6,8 +6,10 @@ setTimeout(() => {
 }, 100)
 
 if (document.querySelector(".theme-button")) {
-    const root = ReactDOM.createRoot(document.querySelector(".theme-button")!)
-    root.render(<ThemeButton />)
+    document.querySelectorAll(".theme-button").forEach((el) => {
+        const root = ReactDOM.createRoot(el!)
+        root.render(<ThemeButton />)
+    })
 }
 
 if (/^\/blogs\/[a-zA-Z]+\/.*$/.test(window.location.pathname)) {
@@ -17,3 +19,8 @@ if (/^\/blogs\/[a-zA-Z]+\/.*$/.test(window.location.pathname)) {
         }
     })
 }
+
+document.querySelector("#mobile-menu")?.addEventListener("click", () => {
+    console.log("clicked")
+    document.querySelector("#side-nav")?.classList.toggle("translate-x-0")
+})
