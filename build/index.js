@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/*!***********************!*\
+  !*** ./src/index.tsx ***!
+  \***********************/
 setTimeout(() => {
   document.body.classList.add("fade-in-start");
 }, 100);
