@@ -21,9 +21,9 @@ get_header()
         <form
             method="post"
             action="<?php echo esc_url(home_url('/subscribe')); ?>"
-            class="mt-8 flex bg-gray-100 border border-gray-200 relative p-2 rounded-md flex-wrap sm:gap-1 gap-2 w-full max-w-md"
+            class="mt-8 flex bg-gray-100 dark:bg-gray-700 dark:border-gray-600 border border-gray-200 relative p-2 rounded-md flex-wrap sm:gap-1 gap-2 w-full max-w-md"
             data-fade="5">
-            <label for="email" class="absolute -top-5 left-0 text-gray-300 bg-gray-100 text-xs font-bold rounded-t px-2 uppercase pb-1 border border-gray-200 border-b-0">
+            <label for="email" class="absolute dark:bg-gray-700 -top-5 left-0 text-gray-300 bg-gray-100 text-xs font-bold rounded-t px-2 uppercase pb-1 border border-gray-200 border-b-0 dark:border-gray-600 dark:text-gray-500">
                 Your email
             </label>
             <input
