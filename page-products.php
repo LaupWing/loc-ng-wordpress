@@ -1,0 +1,40 @@
+<?php
+get_header()
+?>
+<div class="custom-container flex items-start flex-col">
+
+    <section class="flex flex-col py-8">
+        <?php
+        get_template_part('templates/sections/intro', null, [
+            'section_label' => 'Products',
+            'headline' => 'Actually useful stuff.',
+            'description' => 'Built from decades of experience in fitness, coding, and self-mastery — no fluff, just tools that work.',
+            'fade_in' => true
+        ]);
+        ?>
+        <ul class="grid mt-4 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6" data-fade="4">
+            <?php
+            $args = array(
+                "post_type" => "product",
+                "post_status" => "publish",
+                "posts_per_page" => "5",
+                "order" => "ASC",
+                "orderby" => "meta_value_num",
+                "meta_key" => "is_free",
+            );
+            $query = new WP_Query($args);
+            if ($query->have_posts()) :
+                while ($query->have_posts()) : $query->the_post(); ?>
+                    <?php get_template_part('templates/cards/product'); ?>
+                <?php endwhile;
+            else :
+                ?>
+                <li>No recent posts found.</li>
+            <?php endif;
+            wp_reset_postdata(); ?>
+        </ul>
+    </section>
+</div>
+<?php
+get_footer()
+?>
