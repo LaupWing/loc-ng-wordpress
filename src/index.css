@@ -23,10 +23,10 @@
     @apply flex gap-10 text-black dark:text-white;
 }
 #mobile .menu {
-    @apply flex flex-col gap-10 text-gray-500;
+    @apply flex flex-col gap-10 text-gray-400 dark:text-gray-500;
 }
 #mobile .menu .current-menu-item {
-    @apply flex flex-col gap-10 text-gray-300;
+    @apply flex flex-col gap-10 text-gray-700 dark:text-gray-300;
 }
 
 .custom-container {

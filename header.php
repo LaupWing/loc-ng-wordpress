@@ -120,11 +120,11 @@
             </h1>
             <div class="theme-button ml-auto"></div>
         </header>
-        <div id="side-nav" class="fixed sm:hidden transform -translate-x-full inset-0 p-10 bg-slate-900 z-[100] duration-500">
+        <div id="side-nav" class="fixed sm:hidden transform -translate-x-full inset-0 p-10 dark:bg-gray-900 bg-white z-[100] duration-500">
             <nav id="mobile" class="font-cursive flex flex-col items-start">
                 <button id="close" class="ml-auto mb-8">
                     <?php
-                    $custom_class = "w-8 h-8 text-slate-50";
+                    $custom_class = "w-8 h-8 dark:text-gray-100 text-gray-600";
                     get_template_part("templates/icons/close", null, array(
                         "custom_class" => $custom_class
                     ));
