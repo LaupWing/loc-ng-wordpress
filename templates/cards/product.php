@@ -16,7 +16,7 @@
                 $<?php echo get_field('price'); ?>
             </span>
         <?php endif; ?>
-        <h2 class="text-2xl md:text-3xl 2xl:text-4xl text-gray-800 font-bold"><?php the_title(); ?></h2>
+        <h2 class="text-2xl md:text-3xl 2xl:text-4xl text-gray-800 dark:text-gray-200 font-bold"><?php the_title(); ?></h2>
         <!-- get 100 charcaters of the contetn -->
         <p class="text-slate-400 text-lg md:text-xl 2xl:text-2xl">
             <?php
