@@ -20,7 +20,7 @@
 }
 
 .menu {
-    @apply flex gap-10;
+    @apply flex gap-10 text-black dark:text-white;
 }
 #mobile .menu {
     @apply flex flex-col gap-10 text-slate-500;
