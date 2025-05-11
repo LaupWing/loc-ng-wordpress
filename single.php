@@ -1,17 +1,17 @@
 <?php
 get_header()
 ?>
-<div class="custom-container flex items-start flex-col py-8">
+<div class="custom-container flex items-center flex-col py-8">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article class="flex flex-col">
+            <article class="flex flex-col max-w-4xl">
                 <header class="flex flex-col items-center">
                     <div class="flex gap-2 items-center">
                         <span class="font-semibold text-slate-600"><?php echo get_the_date(); ?></span>
                         <span class="font-semibold text-slate-600">|</span>
                         <span class="font-semibold text-slate-600">Loc Nguyen</span>
                     </div>
-                    <h2 class="font-bold text-center text-black dark:text-white mt-1 mb-2 font-cursive text-4xl"><?php the_title(); ?></h2>
-                    <div class="rounded mt-4 max-w-4xl aspect-video overflow-hidden relative">
+                    <h2 class="font-bold text-center text-black dark:text-white mt-1 mb-2 font-cursive md:text-5xl sm:text-4xl"><?php the_title(); ?></h2>
+                    <div class="rounded mt-4  aspect-video overflow-hidden relative">
                         <?php
                         get_template_part("templates/parts/categories");
                         ?>

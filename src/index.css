@@ -80,6 +80,10 @@
     animation: spin 1.5s linear infinite;
 }
 
+#content {
+    @apply text-black dark:text-white;
+}
+
 #content p {
     @apply mb-6;
 }
