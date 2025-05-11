@@ -3,14 +3,14 @@ get_header()
 ?>
 <div class="custom-container flex items-start flex-col">
     <section class="py-20 flex items-start flex-col">
-        <div class="p-1.5 bg-emerald-100 rounded-full mb-4" data-fade="1">
-            <div class="h-full px-3 py-1 bg-emerald-300 flex items-center rounded-full gap-2">
+        <div class="p-1.5 bg-emerald-100 dark:bg-emerald-200/40 rounded-full mb-4" data-fade="1">
+            <div class="h-full px-3 py-1 bg-emerald-300 dark:bg-emerald-300/80 flex items-center rounded-full gap-2">
                 <div class="h-2 w-2 rounded-full bg-lime-300 shadow-lime-200 shadow-lg animate-pulse"></div>
                 <h2 class="text-white text-xs font-bold uppercase">Products to improve your life</h2>
             </div>
         </div>
         <span class="text-slate-400 uppercase text-sm tracking-wider" data-fade="2">Loc Nguyen</span>
-        <h1 class="font-bold max-w-sm text-4xl md:text-5xl 2xl:text-6xl" data-fade="3">Do what works. Enjoy
+        <h1 class="font-bold text-black dark:text-white max-w-sm text-4xl md:text-5xl 2xl:text-6xl" data-fade="3">Do what works. Enjoy
             <div class="inline-block text-light py-0.5">
                 <span class="transition-colors gradient-animation-slow bg-clip-text text-transparent">
                     Life.
