@@ -17,7 +17,11 @@ get_header()
                 </span>
             </div>
         </h1>
-        <p class="mt-4 max-w-4xl text-gray-700 dark:text-gray-400 md:mt-6 md:text-lg 2xl:text-xl" data-fade="4">I possess a strong enthusiasm for both programming and fitness, finding fulfillment in assisting individuals either at the gym or in the realm of coding.</p>
+        <p class="mt-4 max-w-4xl text-gray-700 dark:text-gray-400 md:mt-6 md:text-lg 2xl:text-xl" data-fade="4">Join 15,000+ becoming dangerous in body and mind.
+            Every week, I send raw, real insights on fitness, self-mastery, energy, and attraction — no bullsh*t, just what actually works.
+        </p>
+        <p class="mt-4 max-w-4xl text-gray-700 dark:text-gray-400 md:mt-6 md:text-lg 2xl:text-xl" data-fade="4">When you join, I’ll send you my 30-Day Fitness Course to start building a body people can’t ignore.
+        </p>
         <form
             method="post"
             action="<?php echo esc_url(home_url('/subscribe')); ?>"

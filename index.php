@@ -17,7 +17,9 @@ get_header()
                 </span>
             </div>
         </h1>
-        <p class="mt-4 max-w-4xl text-gray-700 md:mt-6 md:text-lg 2xl:text-xl" data-fade="3">I possess a strong enthusiasm for both programming and fitness, finding fulfillment in assisting individuals either at the gym or in the realm of coding.</p>
+        <p class="mt-4 max-w-4xl text-gray-700 md:mt-6 md:text-lg 2xl:text-xl" data-fade="3">Join 15,000+ becoming dangerous in body and mind.
+            Every week, I send raw, real insights on fitness, self-mastery, energy, and attraction — no bullsh*t, just what actually works.</p>
+        <p class="mt-4 max-w-4xl text-gray-700 md:mt-6 md:text-lg 2xl:text-xl" data-fade="3">When you join, I’ll send you my 30-Day Fitness Course to start building a body people can’t ignore.</p>
         <div class="mt-8 flex bg-gray-100 border border-gray-200 relative p-2 rounded-md flex-wrap gap-1  w-full max-w-md" data-fade="4">
             <label for="email" class="absolute -top-5 left-0 text-gray-300 bg-gray-100 text-xs font-bold rounded-t px-2 uppercase pb-1 border border-gray-200 border-b-0">
                 Your email
