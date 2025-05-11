@@ -1,3 +1,3 @@
-<button class="rounded font-bold px-4 scale-100 bg-light text-gray-600 disabled:bg-gray-200 py-2 border border-gray-300 focus:outline-none focus-visible:ring focus-visible:ring-accent shadow-sm hover:scale-[1.03] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 transition duration-100 cursor-pointer">
+<button class="rounded font-bold px-4 scale-100 bg-light text-gray-600 disabled:bg-gray-200 py-2 border border-gray-300 dark:bg-black dark:text-gray-200 dark:border-gray-600 focus:outline-none focus-visible:ring focus-visible:ring-accent shadow-sm hover:scale-[1.03] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 transition duration-100 cursor-pointer">
     <?php echo isset($args['button_text']) ? esc_html($args['button_text']) : 'Button Text'; ?>
 </button>
