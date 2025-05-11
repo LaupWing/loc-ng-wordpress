@@ -1,4 +1,4 @@
-<li class="border rounded-md flex flex-col overflow-hidden shadow border-gray-200">
+<li class="border rounded-md flex flex-col overflow-hidden shadow border-gray-200 dark:border-gray-800">
     <a class="flex flex-col flex-1 gap-2 relative" href="<?php the_permalink(); ?>">
         <!-- Get the categories -->
         <?php
@@ -21,9 +21,9 @@
 
         <?php endif; ?>
         <div class="flex flex-col flex-1 gap-2 p-4 pb-1">
-            <h2 class="text-2xl text-gray-800 font-bold"><?php the_title(); ?></h2>
+            <h2 class="text-2xl text-gray-800 dark:text-white font-bold"><?php the_title(); ?></h2>
             <!-- get 100 charcaters of the contetn -->
-            <p class="text-slate-400">
+            <p class="text-gray-400">
                 <?php
                 $content = get_the_content();
                 $content = strip_tags($content);
@@ -36,7 +36,7 @@
                 </span>
                 <span class="text-xs text-slate-500"><?php the_date(); ?></span>
             </div>
-            <span class="mt-auto pt-3 block text-xs uppercase text-slate-200 font-bold">Read more</span>
+            <span class="mt-auto pt-3 block text-xs uppercase text-gray-200 dark:text-gray-700 font-bold">Read more</span>
         </div>
     </a>
 </li>
