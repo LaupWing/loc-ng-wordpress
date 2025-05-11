@@ -10,7 +10,7 @@ get_header()
                         <span class="font-semibold text-slate-600">|</span>
                         <span class="font-semibold text-slate-600">Loc Nguyen</span>
                     </div>
-                    <h2 class="font-bold text-center text-black dark:text-white mt-1 mb-2 font-cursive md:text-5xl sm:text-4xl"><?php the_title(); ?></h2>
+                    <h2 class="font-bold text-center text-black dark:text-white mt-1 mb-2 font-cursive text-3xl md:text-5xl sm:text-4xl"><?php the_title(); ?></h2>
                     <div class="rounded mt-4  aspect-video overflow-hidden relative">
                         <?php
                         get_template_part("templates/parts/categories");
