@@ -6721,8 +6721,10 @@ if (/^\/blogs\/[a-zA-Z]+\/.*$/.test(window.location.pathname)) {
   });
 }
 document.querySelector("#mobile-menu")?.addEventListener("click", () => {
-  console.log("clicked");
-  document.querySelector("#side-nav")?.classList.toggle("translate-x-0");
+  document.querySelector("#side-nav")?.classList.add("translate-x-0");
+});
+document.querySelector("#close")?.addEventListener("click", () => {
+  document.querySelector("#side-nav")?.classList.remove("translate-x-0");
 });
 })();
 
