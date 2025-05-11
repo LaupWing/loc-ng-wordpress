@@ -6576,7 +6576,7 @@ const ThemeButton = () => {
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
     suppressHydrationWarning: true,
-    className: "relative flex h-9 w-17 overflow-hidden rounded-full bg-gray-300 p-1 dark:bg-gray-300",
+    className: "relative flex h-9 w-17 overflow-hidden rounded-full bg-gray-200 p-1 dark:bg-gray-300",
     onClick: toggleSwitch,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       ref: knobRef,

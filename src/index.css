@@ -12,6 +12,8 @@
     --nav-height: 4.5rem;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --color-dark: rgb(var(--custom-dark));
     --color-light: rgb(var(--custom-light));
