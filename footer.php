@@ -34,7 +34,7 @@
         }
         ?>
     </ul>
-    <p class="text-gray-300 dark:text-gray-700 text-xl">© All Rights Reserved.</p>
+    <p class="text-gray-200 dark:text-gray-700 text-sm font-bold uppercase">© All Rights Reserved.</p>
 </footer>
 </div>
 <?php wp_footer(); ?>
