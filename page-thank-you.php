@@ -12,7 +12,9 @@ get_header()
             'fade_in' => true
         ]);
         ?>
-
+        <a class="mt-6" href="/blogs" data-fade="4">
+            <?php get_template_part('templates/ui/button', null, ['button_text' => 'See all blogs']); ?>
+        </a>
     </section>
 </div>
 <?php
