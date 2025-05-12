@@ -3,7 +3,7 @@ get_header()
 ?>
 <div class="custom-container flex items-start flex-col">
 
-    <section class="flex flex-col py-8">
+    <section class="flex flex-col items-start justify-start py-8">
         <?php
         get_template_part('templates/sections/intro', null, [
             'section_label' => 'Thank You',
