@@ -5,8 +5,8 @@
         $categories = get_the_category();
         $available_categories = [
             "fitness" => "bg-emerald-600/60",
-            "coding" => "bg-blue-600",
-            "mindset" => "bg-purple-600",
+            "coding" => "bg-blue-600/60",
+            "social-skills" => "bg-indigo-600/60",
         ];
         if ($categories) {
             if (array_key_exists($categories[0]->slug, $available_categories)) {
