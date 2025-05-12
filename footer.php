@@ -12,6 +12,28 @@
 </section>
 
 <footer class="mt-auto pt-10">
+    <ul class="flex gap-4 mb-4 text-slate-300 justify-center">
+        <?php
+        $social_media = [
+            "facebook",
+            "instagram",
+            "twitter",
+            "youtube",
+            "linkedin",
+        ];
+        foreach ($social_media as $media) {
+        ?>
+            <li>
+                <a href="https://x.com/LaupWing1994" target="_blank">
+                    <?php
+                    get_template_part("templates/icons/$media");
+                    ?>
+                </a>
+            </li>
+        <?php
+        }
+        ?>
+    </ul>
     <p class="text-gray-300 dark:text-gray-700 text-xl">© All Rights Reserved.</p>
 </footer>
 </div>
