@@ -62,7 +62,8 @@ function handle_subscribe_form()
                 'Content-Type'  => 'application/json',
             ),
         ));
-
+        // Log the response for debugging
+        error_log(print_r($response, true));
         if (is_wp_error($response)) {
             wp_die('API request failed.');
         }
