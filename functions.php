@@ -68,7 +68,7 @@ function handle_subscribe_form()
         }
 
         // Redirect after success
-        wp_redirect(home_url('/confirmed-email'));
+        wp_redirect(home_url('/thank-you'));
         exit;
     }
 }
