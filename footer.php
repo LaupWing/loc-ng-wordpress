@@ -11,7 +11,7 @@
     </div>
 </section>
 
-<footer class="mt-auto pt-10">
+<footer class="mt-auto pt-6">
     <ul class="flex gap-4 mb-4 text-slate-300 justify-center">
         <?php
         $social_media = [
