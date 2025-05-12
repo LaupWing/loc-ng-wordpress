@@ -1,9 +1,22 @@
 <?php
 get_header()
 ?>
-<div class="custom-container flex items-center flex-col py-8">
+<section class="py-6 flex items-start flex-col">
+    <h3 class="transition-colors text-4xl md:text-5xl 2xl:text-6xl font-bold gradient-animation-slow bg-clip-text text-transparent" data-fade="1">
+        Not a subscriber?
+    </h3>
+    <p class="mt-4 max-w-4xl text-gray-700 dark:text-gray-400 md:mt-6 md:text-lg 2xl:text-xl" data-fade="2">Join 15,000+ becoming dangerous in body and mind.
+        Every week, I send raw, real insights on fitness, self-mastery, energy, and attraction — no bullsh*t, just what actually works.
+    </p>
+    <p class="mt-4 max-w-4xl text-gray-700 dark:text-gray-400 md:mt-6 md:text-lg 2xl:text-xl" data-fade="3">When you join, I’ll send you my 30-Day Fitness Course to start building a body people can’t ignore.
+    </p>
+    <div data-fade="5" class="w-full">
+        <?php get_template_part('templates/sections/subscribe_form'); ?>
+    </div>
+</section>
+<div class="custom-container flex items-center flex-col pb-8 mt-2">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article class="flex flex-col max-w-4xl">
+            <article class="flex flex-col max-w-4xl" data-fade="4">
                 <header class="flex flex-col items-center">
                     <div class="flex gap-2 items-center">
                         <span class="font-semibold text-slate-600"><?php echo get_the_date(); ?></span>
