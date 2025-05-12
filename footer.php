@@ -16,7 +16,7 @@
 </section>
 
 <footer class="mt-auto pt-20">
-    <p class="text-slate-600 text-xl">© All Rights Reserved.</p>
+    <p class="text-gray-300 dark:text-gray-700 text-xl">© All Rights Reserved.</p>
 </footer>
 </div>
 <?php wp_footer(); ?>
