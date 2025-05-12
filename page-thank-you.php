@@ -6,9 +6,9 @@ get_header()
     <section class="flex flex-col py-8">
         <?php
         get_template_part('templates/sections/intro', null, [
-            'section_label' => 'Products',
-            'headline' => 'Actually useful stuff.',
-            'description' => 'Built from decades of experience in fitness, coding, and self-mastery — no fluff, just tools that work.',
+            'section_label' => 'Thank You',
+            'headline' => 'Thank you for subscribing, friend!',
+            'description' => 'You will receive exclusive deals and lots of free value every other day. I am excited to have you on board. You can read my latest blog posts in the meantime!',
             'fade_in' => true
         ]);
         ?>
