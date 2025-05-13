@@ -28,7 +28,7 @@ get_header()
             echo paginate_links(array(
                 'prev_text' => __('« Previous'),
                 'next_text' => __('Next »'),
-                'type' => 'list', // Optional: outputs <ul><li> structure
+                'type' => 'list',
             ));
             ?>
         </div>
