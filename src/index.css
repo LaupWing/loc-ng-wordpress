@@ -81,6 +81,14 @@
     animation: spin 1.5s linear infinite;
 }
 
+.page-numbers {
+    @apply flex items-center justify-center gap-4;
+}
+
+.page-numbers .current {
+    @apply font-bold text-gray-900 dark:text-gray-100;
+}
+
 #content {
     @apply text-black dark:text-white;
 }
