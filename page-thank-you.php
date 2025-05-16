@@ -17,6 +17,33 @@ get_header()
         </a>
     </section>
 </div>
-<?php
-get_footer()
-?>
+<footer class="mt-auto pt-6">
+    <ul class="flex gap-4 mb-4 text-slate-300 justify-center">
+        <?php
+        $social_media = [
+            "facebook",
+            "instagram",
+            "twitter",
+            "youtube",
+            "linkedin",
+        ];
+        foreach ($social_media as $media) {
+        ?>
+            <li>
+                <a href="https://x.com/LaupWing1994" target="_blank">
+                    <?php
+                    get_template_part("templates/icons/$media");
+                    ?>
+                </a>
+            </li>
+        <?php
+        }
+        ?>
+    </ul>
+    <p class="text-gray-200 dark:text-gray-700 text-sm font-bold uppercase">© All Rights Reserved.</p>
+</footer>
+</div>
+<?php wp_footer(); ?>
+</body>
+
+</html>

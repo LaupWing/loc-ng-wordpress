@@ -117,6 +117,10 @@
     @apply text-blue-500 underline;
 }
 
+#content hr {
+    @apply mb-4 border-gray-800;
+}
+
 @layer base {
     .gradient-animation-slow {
         background: linear-gradient(
