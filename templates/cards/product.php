@@ -1,5 +1,8 @@
 <li>
-    <a class="flex flex-col gap-2 relative" href="<?php the_permalink(); ?>">
+    <?php
+    $link = get_field('custom_product_url');
+    ?>
+    <a class="flex flex-col gap-2 relative" href="<?php echo $link ?>">
         <?php
         get_template_part("templates/icons/link", null, [
             "custom_class" => "absolute top-4 right-4 w-8 h-8 text-white"
