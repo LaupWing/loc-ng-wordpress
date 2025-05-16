@@ -82,7 +82,7 @@
 }
 
 .page-numbers {
-    @apply flex items-center justify-center gap-4;
+    @apply flex items-center justify-center gap-4 dark:text-gray-400;
 }
 
 .page-numbers .current {
